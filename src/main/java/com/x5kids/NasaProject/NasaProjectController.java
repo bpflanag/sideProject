@@ -12,7 +12,7 @@ public class NasaProjectController {
     @Autowired
     private FlareDriver flareDriver;
     @RequestMapping(value = "/getFlareResponse", method = RequestMethod.GET)
-    public int getFlareResponse() {
+    public FlareResponse getFlareResponse() {
         return this.flareDriver.getNumberOfFlares();
     }
 

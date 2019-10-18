@@ -8,6 +8,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MvcResult;
 
 import static org.junit.Assert.assertEquals;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -24,9 +25,16 @@ public class NasaProjectControllerTests {
     private MockMvc mockMvc;
 
     @Test
-    public void x() throws Exception {
+    public void givenEmptyFlareRequest_ThenResponseOK() throws Exception {
         this.mockMvc.perform(get("/getFlareResponse"))
                 .andDo(print()).andExpect(status().isOk());
     }
 
+    @Test
+    public void x() throws Exception {
+
+        this.mockMvc.perform(get("/getFlareResponse"))
+                .andDo(print()).andExpect(status().isOk())
+                .andExpect(jsonPath("$.numOfFlares").value("11"));
+    }
 }

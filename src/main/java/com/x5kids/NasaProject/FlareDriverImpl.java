@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 @Primary
 public class FlareDriverImpl implements FlareDriver {
     @Override
-    public int getNumberOfFlares() {
-        return 0;
+    public FlareResponse getNumberOfFlares() {
+        return new FlareResponse(11);
     }
 }
