@@ -3,13 +3,14 @@ package com.x5kids.NasaProject.models;
 import java.util.Date;
 
 public class NasaProjectNearEarthObjectModel {
-    public String startDate;
 
-    public void setStartDate(String startDate) {
-        this.startDate = startDate;
+    private String name;
+
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getStartDate() {
-        return startDate;
+    public String getName() {
+        return name;
     }
 }

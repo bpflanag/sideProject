@@ -8,9 +8,9 @@ import static org.junit.Assert.assertEquals;
 public class NasaProjectNearEarthObjectModelTests {
 
     @Test
-    public void givenSetStartDateInStringFormat19990101_thenGetStartDateInStringFormat19990101() {
-        NasaProjectNearEarthObjectModel n = new NasaProjectNearEarthObjectModel();
-        n.setStartDate("1999-01-01");
-        assertEquals(n.getStartDate(), "1999-01-01");
+    public void givenSetNameHenry_thenGetNameHenry() {
+        NasaProjectNearEarthObjectModel nasaProjectNearEarthObjectModel = new NasaProjectNearEarthObjectModel();
+        nasaProjectNearEarthObjectModel.setName("henry");
+        assertEquals(nasaProjectNearEarthObjectModel.getName(), "henry");
     }
 }
