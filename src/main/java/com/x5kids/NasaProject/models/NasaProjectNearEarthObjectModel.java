@@ -6,6 +6,7 @@ public class NasaProjectNearEarthObjectModel {
 
     private String name;
     private int id;
+    private boolean isPotentiallyHazardousAsteroid;
 
     public void setName(String name) {
         this.name = name;
@@ -21,5 +22,13 @@ public class NasaProjectNearEarthObjectModel {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public void setIsPotentiallyHazardousAsteroid(boolean isPotentiallyHazardousAsteroid) {
+        this.isPotentiallyHazardousAsteroid = isPotentiallyHazardousAsteroid;
+    }
+
+    public boolean getIsPotentiallyHazardousAsteroid() {
+        return isPotentiallyHazardousAsteroid;
     }
 }

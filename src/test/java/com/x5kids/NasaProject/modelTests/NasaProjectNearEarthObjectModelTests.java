@@ -15,9 +15,16 @@ public class NasaProjectNearEarthObjectModelTests {
     }
 
     @Test
-    public void x() {
+    public void givenSetId123456_thenGetId123456() {
         NasaProjectNearEarthObjectModel nasaProjectNearEarthObjectModel = new NasaProjectNearEarthObjectModel();
         nasaProjectNearEarthObjectModel.setId(123456);
         assertEquals(nasaProjectNearEarthObjectModel.getId(), 123456);
+    }
+
+    @Test
+    public void givenSetIsPotentiallyHazardousAsteroidFalse_thenGetIsPotentiallyHazardousAsteroidFalse() {
+        NasaProjectNearEarthObjectModel nasaProjectNearEarthObjectModel = new NasaProjectNearEarthObjectModel();
+        nasaProjectNearEarthObjectModel.setIsPotentiallyHazardousAsteroid(false);
+        assertEquals(nasaProjectNearEarthObjectModel.getIsPotentiallyHazardousAsteroid(), false);
     }
 }
