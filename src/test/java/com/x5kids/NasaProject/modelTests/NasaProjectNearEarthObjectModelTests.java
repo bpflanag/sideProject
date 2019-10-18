@@ -27,4 +27,11 @@ public class NasaProjectNearEarthObjectModelTests {
         nasaProjectNearEarthObjectModel.setIsPotentiallyHazardousAsteroid(false);
         assertEquals(nasaProjectNearEarthObjectModel.getIsPotentiallyHazardousAsteroid(), false);
     }
+
+    @Test
+    public void givenSetCount10_thenGetCount10() {
+        NasaProjectNearEarthObjectModel nasaProjectNearEarthObjectModel = new NasaProjectNearEarthObjectModel();
+        nasaProjectNearEarthObjectModel.setCount(10);
+        assertEquals(nasaProjectNearEarthObjectModel.getCount(), 10);
+    }
 }
