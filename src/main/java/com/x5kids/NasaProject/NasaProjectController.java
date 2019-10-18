@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class NasaProjectController {
 
-//    @ResponseBody
+    @ResponseBody
     @GetMapping("/getNearEarthObjectCount")
-    public int getNearEarthObjectCount() {
+    public int getNearEarthObjectCount(@RequestParam String startDate) {
         return 10;
     }
 }

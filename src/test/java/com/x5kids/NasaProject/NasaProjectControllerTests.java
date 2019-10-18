@@ -23,16 +23,23 @@ public class NasaProjectControllerTests {
     private MockMvc mockMvc;
 
     @Test
-    public void WhenHelloCalled_thenReturnOK() throws Exception {
-        mockMvc.perform(get("/getNearEarthObjectCount")).andDo(print()).andExpect(status().isOk());
+    public void GivenStartDate_WhenGetNearEarthObjectCountCalled_thenReturnOK() throws Exception {
+        String startDate = "1999-01-01";
+
+        mockMvc.perform(get("/getNearEarthObjectCount").param("startDate", startDate))
+                .andDo(print())
+                .andExpect(status().isOk());
     }
 
     @Test
-    public void s() throws Exception {
-        MvcResult result = mockMvc.perform(get("/getNearEarthObjectCount")).andDo(print()).andReturn();
+    public void GivenStartDate_WhenGetNearEarthObjectCount_thenReturn10() throws Exception {
+        String startDate = "1999-01-01";
+
+        MvcResult result = mockMvc.perform(get("/getNearEarthObjectCount").param("startDate", startDate))
+                .andDo(print())
+                .andReturn();
         String content = result.getResponse().getContentAsString();
 
         assertEquals(Integer.parseInt(content), 10);
-
     }
 }
