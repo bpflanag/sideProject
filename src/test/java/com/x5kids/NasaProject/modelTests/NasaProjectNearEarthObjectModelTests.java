@@ -13,4 +13,11 @@ public class NasaProjectNearEarthObjectModelTests {
         nasaProjectNearEarthObjectModel.setName("henry");
         assertEquals(nasaProjectNearEarthObjectModel.getName(), "henry");
     }
+
+    @Test
+    public void x() {
+        NasaProjectNearEarthObjectModel nasaProjectNearEarthObjectModel = new NasaProjectNearEarthObjectModel();
+        nasaProjectNearEarthObjectModel.setId(123456);
+        assertEquals(nasaProjectNearEarthObjectModel.getId(), 123456);
+    }
 }
